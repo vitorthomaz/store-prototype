@@ -7,9 +7,12 @@
       "modules": true
     }
   },
-  "extends": ["plugin:prettier/recommended"],
-  "plugins": ["prettier"],
+  "extends": ["plugin:prettier/recommended", "plugin:react-hooks/recommended"],
+  "plugins": ["prettier", "react-hooks", "react"],
   "rules": {
-    "prettier/prettier": "warn"
+    "prettier/prettier": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "warn",
+    "react/prop-types": "warn"
   }
 }
