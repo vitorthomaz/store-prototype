@@ -7,7 +7,8 @@ module.exports = {
     contentBase: path.resolve(__dirname, 'dist'),
     compress: true,
     hot: true,
-    port: 3000
+    port: 3000,
+    historyApiFallback: true
   },
   resolve: { extensions: ['.js', '.jsx'] },
   entry: [path.resolve(__dirname, 'src', 'index.js')],
