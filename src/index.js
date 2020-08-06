@@ -5,12 +5,13 @@ import { ThemeProvider } from 'styled-components';
 
 import { ErrorBoundary } from './components';
 
-import { theme } from './global';
+import { theme, GlobalStyle } from './global';
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <ErrorBoundary>
+        <GlobalStyle />
         <App />
       </ErrorBoundary>
     </ThemeProvider>
