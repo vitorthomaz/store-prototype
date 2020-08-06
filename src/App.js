@@ -1,11 +1,16 @@
 import React from 'react';
 
-import { Greetings } from './components';
+import { Header, Footer } from './components';
+import Routes from './routes';
 
 const App = () => {
-  console.log('Started a React application');
-
-  return <Greetings />;
+  return (
+    <div>
+      <Header />
+      <Routes />
+      <Footer />
+    </div>
+  );
 };
 
 export default App;
