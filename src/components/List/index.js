@@ -3,9 +3,9 @@ import propTypes from 'prop-types';
 
 import { Container } from './styles';
 
-const List = ({ data }) => {
+const List = ({ data, styles }) => {
   return (
-    <Container>
+    <Container styles={styles}>
       {data.map(({ description, text, Component, action }) => (
         <Component key={description} onClick={action()}>
           {text}
@@ -16,7 +16,8 @@ const List = ({ data }) => {
 };
 
 List.propTypes = {
-  data: propTypes.array.isRequired
+  data: propTypes.array.isRequired,
+  styles: propTypes.string
 };
 
 export default List;

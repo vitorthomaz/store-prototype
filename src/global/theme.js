@@ -4,14 +4,18 @@ const theme = {
     black: '#0C090D',
     white: '#F8E9E9',
     green: '#8FC0A9',
-    blue: '#68B0AB'
+    blue: '#68B0AB',
+    lightGray: '#BDB4B2'
   },
   cards: {
     green: '#4F772D',
     red: '#B80C09'
   },
   spacing: {
-    page: '3% 10%'
+    padding: {
+      header: '1% 10%',
+      footer: '3% 10%'
+    }
   }
 };
 

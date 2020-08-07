@@ -5,12 +5,14 @@ import { List as ButtonList, Logo } from '../../components';
 
 import { Container, Link } from './styles';
 
+const styles = 'width: 20%;justify-content: space-around;';
+
 const Header = () => {
   const history = useHistory();
   const buttons = [
     {
       description: 'Goes to Home Page',
-      text: 'Home',
+      text: 'Início',
       Component: Link,
       action: () => () => history.push('/')
     },
@@ -25,7 +27,7 @@ const Header = () => {
   return (
     <Container>
       <Logo />
-      <ButtonList data={buttons} />
+      <ButtonList data={buttons} styles={styles} />
     </Container>
   );
 };

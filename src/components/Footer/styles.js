@@ -3,11 +3,11 @@ import styled from 'styled-components';
 export const Container = styled.footer`
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: space-evenly;
 
-  padding: ${props => props.theme.spacing.page};
+  padding: ${props => props.theme.spacing.padding.footer};
 
-  background: ${props => props.theme.colors.white};
+  background: ${props => props.theme.colors.lightGray};
 `;
 
 export const Author = styled.div`

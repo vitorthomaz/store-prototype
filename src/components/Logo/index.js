@@ -9,7 +9,7 @@ const Logo = () => {
   return (
     <Container>
       <Icon width={size} height={size} />
-      {/* <Text>The Digital Store</Text> */}
+      <Text>A Loja Digital</Text>
     </Container>
   );
 };
