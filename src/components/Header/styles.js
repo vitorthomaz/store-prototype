@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const Container = styled.div`
   background: ${props => props.theme.colors.yellow};
 
-  padding: 2% 10%;
+  padding: ${props => props.theme.spacing.page};
 
   display: flex;
   flex-direction: row;

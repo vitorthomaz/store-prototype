@@ -9,6 +9,9 @@ const theme = {
   cards: {
     green: '#4F772D',
     red: '#B80C09'
+  },
+  spacing: {
+    page: '3% 10%'
   }
 };
 
