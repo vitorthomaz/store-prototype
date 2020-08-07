@@ -5,6 +5,8 @@ import { List as ButtonList, Logo } from '../../components';
 
 import { Container, Link } from './styles';
 
+import path from '../../constants/paths';
+
 const styles = 'width: 20%;justify-content: space-around;';
 
 const Header = () => {
@@ -14,13 +16,13 @@ const Header = () => {
       description: 'Goes to Home Page',
       text: 'Início',
       Component: Link,
-      action: () => () => history.push('/')
+      action: () => () => history.push(path.HOME)
     },
     {
       description: 'Goes to About Page',
       text: 'Sobre',
       Component: Link,
-      action: () => () => history.push('/about')
+      action: () => () => history.push(path.ABOUT)
     }
   ];
 
