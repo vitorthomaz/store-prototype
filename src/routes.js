@@ -1,20 +1,18 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Switch, Route } from 'react-router-dom';
 
 import Home from './pages/Home';
 import Products from './pages/Products';
 
-const AppRouter = () => {
+const AppRoutes = () => {
   return (
-    <Router>
-      <Switch>
-        {routes.map(({ path, Component }) => (
-          <Route exact path={path}>
-            <Component />
-          </Route>
-        ))}
-      </Switch>
-    </Router>
+    <Switch>
+      {routes.map(({ path, Component, description }) => (
+        <Route exact path={path} key={description}>
+          <Component />
+        </Route>
+      ))}
+    </Switch>
   );
 };
 
@@ -31,4 +29,4 @@ const routes = [
   }
 ];
 
-export default AppRouter;
+export default AppRoutes;
