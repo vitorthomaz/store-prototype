@@ -6,6 +6,8 @@ export const Container = styled.footer`
   justify-content: space-evenly;
 
   padding: ${props => props.theme.spacing.padding.footer};
+`;
 
-  background: ${props => props.theme.colors.lightGray};
+export const Author = styled.div`
+  width: fit-content;
 `;
