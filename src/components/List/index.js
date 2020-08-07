@@ -6,8 +6,11 @@ import { Container } from './styles';
 const List = ({ data, styles }) => {
   return (
     <Container styles={styles}>
-      {data.map(({ description, text, Component, action }) => (
-        <Component key={description} onClick={action()}>
+      {data.map(({ text, Component, description, action }, idx) => (
+        <Component
+          key={description || idx}
+          onClick={(action && action()) || undefined}
+        >
           {text}
         </Component>
       ))}
