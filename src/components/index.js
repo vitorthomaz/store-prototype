@@ -6,3 +6,6 @@ export { default as ExternalLink } from './ExternalLink';
 export { default as BackToTop } from './BackToTop';
 export { default as ErrorBoundary } from './ErrorBoundary';
 export { default as LoadingIndicator } from './LoadingIndicator';
+export { default as ProductCard } from './ProductCard';
+export { default as GreenZone } from './Zone/green';
+export { default as RedZone } from './Zone/red';
