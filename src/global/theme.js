@@ -14,7 +14,8 @@ const theme = {
   spacing: {
     padding: {
       header: '1% 10%',
-      footer: '3% 10%'
+      footer: '3% 10%',
+      page: '2% 10%'
     }
   }
 };
