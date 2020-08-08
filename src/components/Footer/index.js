@@ -28,8 +28,8 @@ align-items: flex-start;
 const Footer = () => {
   return (
     <Container>
-      {[1, 2].map(() => (
-        <Column>
+      {[1, 2].map(elem => (
+        <Column key={elem}>
           <Title>Lorem ipsun</Title>
           <List data={LoremIpsun} styles={styles} />
         </Column>
