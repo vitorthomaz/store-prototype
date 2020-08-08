@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { ArrowUp } from '../../assets';
+import { ArrowUp } from '../../assets/icons';
 
 import { Container, Text } from './styles';
 

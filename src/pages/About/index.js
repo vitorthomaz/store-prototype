@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Github, Linkedin } from '../../assets';
+import { Github, Linkedin } from '../../assets/icons';
 import { ExternalLink } from '../../components';
 
 import { Container, Author } from './styles';

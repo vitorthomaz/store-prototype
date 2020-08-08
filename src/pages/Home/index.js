@@ -3,7 +3,7 @@ import { useHistory } from 'react-router-dom';
 
 import { Container, Input, Form } from './styles';
 
-import { Search } from '../../assets';
+import { Search } from '../../assets/icons';
 import { convertToGeo } from '../../services/geocoding';
 import { getPocId } from '../../services/poc';
 

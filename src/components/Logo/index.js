@@ -2,7 +2,7 @@ import React from 'react';
 
 import { Container, Text } from './styles';
 
-import { Icon } from '../../assets';
+import { Icon } from '../../assets/icons';
 const size = '60';
 
 const Logo = () => {
