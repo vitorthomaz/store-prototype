@@ -1,9 +1,12 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 
-// import { Container } from './styles';
+import { Container } from './styles';
 
 function Products() {
-  return <span>Products Page</span>;
+  const pocId = useSelector(state => state);
+  console.log(pocId);
+  return <Container>Products Page</Container>;
 }
 
 export default Products;

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useHistory } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
 
 import { Container, Input, Form } from './styles';
 
@@ -8,11 +9,14 @@ import { convertToGeo } from '../../services/geocoding';
 import { getPocId } from '../../services/poc';
 
 import paths from '../../constants/paths';
+import { setPoc } from '../../store/actions/poc';
 
 const size = 28;
 
 const Home = () => {
   const history = useHistory();
+  const dispatch = useDispatch();
+
   const [text, setText] = useState('');
 
   const searchAddress = () => async () => {
@@ -42,7 +46,7 @@ const Home = () => {
       return;
     }
 
-    console.log(graphql.id);
+    dispatch(setPoc(graphql.id));
 
     history.push(paths.PRODUCTS);
   };
