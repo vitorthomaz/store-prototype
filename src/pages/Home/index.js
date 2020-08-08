@@ -5,6 +5,7 @@ import { Container, Input, Form } from './styles';
 
 import { Search } from '../../assets';
 import { convertToGeo } from '../../services/geocoding';
+import { getPocId } from '../../services/poc';
 
 import paths from '../../constants/paths';
 
@@ -20,9 +21,39 @@ function Home() {
       return;
     }
 
-    const geo = await convertToGeo(text);
-    console.log(geo);
-    history.push(paths.PRODUCTS);
+    const {
+      geometry: { lat, lng },
+      error: geoError,
+      empty: geoEmpty
+    } = await convertToGeo(text);
+
+    if (geoError) {
+      console.log(geoError);
+      return;
+    }
+
+    if (geoEmpty) {
+      console.log(geoEmpty);
+    }
+
+    const { id, error: graphqlError, empty: graphqlEmpty } = await getPocId(
+      lat,
+      lng
+    );
+
+    if (graphqlError) {
+      console.log(graphqlError);
+      return;
+    }
+
+    if (graphqlEmpty) {
+      console.log(graphqlEmpty);
+      return;
+    }
+
+    console.log(id);
+
+    // history.push(paths.PRODUCTS);
   };
 
   return (
