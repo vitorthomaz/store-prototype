@@ -1,5 +1,11 @@
 import { zeGraph } from '../services';
 
+import {
+  POC_EMPTY,
+  POC_REQUEST_ERROR,
+  POC_VALIDATION_ERROR
+} from '../constants/services';
+
 const query = {
   getPocId: `
     query pocSearch( $lat: String!, $long: String!, $algorithm: String!, $now: DateTime!) {
@@ -16,11 +22,11 @@ export const getPocId = async (
   algorithm = 'NEAREST',
   now = new Date().toISOString()
 ) => {
-  const valids = checkIfString(algorithm, now);
-  if (valids < 2) {
-    console.log('getPocId was called with invalid params');
-    return { error: 'Invalid getPocId request' };
+  if (typeof algorithm !== 'string' || typeof now !== 'string') {
+    console.log('Method getPocId was called with invalid params.');
+    return POC_VALIDATION_ERROR;
   }
+
   const lat = numberLat.toString();
   const long = numberLong.toString();
 
@@ -33,19 +39,11 @@ export const getPocId = async (
     const result = await zeGraph.post('graphql', data);
     const poc = result.data.data.pocSearch;
 
-    if (poc.length < 1) return { empty: 'There is no poc for the address' };
+    if (poc.length < 1) return POC_EMPTY;
 
     return poc[0];
   } catch (err) {
     console.log(err);
-    return { error: 'getPocId request failed.' };
+    return POC_REQUEST_ERROR;
   }
-};
-
-const checkIfString = (...args) => {
-  const valid = args.filter(arg => typeof arg === 'string');
-
-  if (valid.length === args.length) return args.length;
-
-  return 0;
 };

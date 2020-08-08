@@ -11,49 +11,40 @@ import paths from '../../constants/paths';
 
 const size = 28;
 
-function Home() {
+const Home = () => {
   const history = useHistory();
   const [text, setText] = useState('');
 
   const searchAddress = () => async () => {
-    if (text.length < 4) {
-      console.log('please type a bigger address');
+    const geo = await convertToGeo(text);
+
+    if (geo.error) {
+      console.log(geo.error);
       return;
     }
 
-    const {
-      geometry: { lat, lng },
-      error: geoError,
-      empty: geoEmpty
-    } = await convertToGeo(text);
-
-    if (geoError) {
-      console.log(geoError);
+    if (geo.empty) {
+      console.log(geo.empty);
       return;
     }
 
-    if (geoEmpty) {
-      console.log(geoEmpty);
-    }
+    const { lat, lng } = geo.geometry;
 
-    const { id, error: graphqlError, empty: graphqlEmpty } = await getPocId(
-      lat,
-      lng
-    );
+    const graphql = await getPocId(lat, lng);
 
-    if (graphqlError) {
-      console.log(graphqlError);
+    if (graphql.error) {
+      console.log(graphql.error);
       return;
     }
 
-    if (graphqlEmpty) {
-      console.log(graphqlEmpty);
+    if (graphql.empty) {
+      console.log(graphql.empty);
       return;
     }
 
-    console.log(id);
+    console.log(graphql.id);
 
-    // history.push(paths.PRODUCTS);
+    history.push(paths.PRODUCTS);
   };
 
   return (
@@ -67,6 +58,6 @@ function Home() {
       </Form>
     </Container>
   );
-}
+};
 
 export default Home;
