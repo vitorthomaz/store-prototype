@@ -14,12 +14,12 @@ export const Container = styled.main`
     'footer';
 
   @media screen and (max-width: ${media.mobile.width}) {
-    grid-template-rows: 100px 1fr 80px;
+    grid-template-rows: 100px 1fr 100px;
   }
 
   @media screen and (min-width: ${media.mobile.width}) and (max-width: ${media
       .tablet.width}) {
-    grid-template-rows: 120px 1fr 100px;
+    grid-template-rows: 120px 1fr 120px;
   }
 `;
 

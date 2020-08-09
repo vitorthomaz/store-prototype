@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { BackToTop, List } from './components';
+import { BackToTop, BottomNav } from './components';
 
-import { Container, Sized, Column, Title } from './styles';
+import { Container, Sized } from './styles';
 
 const title = 'RECURSOS';
 
@@ -37,10 +37,7 @@ const Footer = () => {
   return (
     <Container>
       <Sized>
-        <Column>
-          <Title>{title}</Title>
-          <List items={partners} />
-        </Column>
+        <BottomNav title={title} items={partners} />
         <BackToTop />
       </Sized>
     </Container>

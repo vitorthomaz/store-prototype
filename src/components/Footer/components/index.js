@@ -1,2 +1,2 @@
-export { default as List } from './List';
+export { default as BottomNav } from './BottomNav';
 export { default as BackToTop } from './BackToTop';

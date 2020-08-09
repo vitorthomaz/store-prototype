@@ -11,7 +11,7 @@ export const Container = styled.header`
 `;
 
 export const Sized = styled.div`
-  margin: 32px 64px;
+  margin: 32px 200px;
   width: 100%;
 
   display: flex;
