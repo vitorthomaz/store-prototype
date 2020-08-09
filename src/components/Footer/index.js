@@ -1,40 +1,48 @@
 import React from 'react';
 
-import { BackToTop, List } from '../../components';
+import { BackToTop, List } from './components';
 
-import { Container, Column, Title, Element } from './styles';
+import { Container, Sized, Column, Title } from './styles';
 
-const LoremIpsun = [
+const title = 'RECURSOS';
+
+const partners = [
   {
-    text: 'Adipiscing elit',
-    Component: Element
+    text: 'React',
+    site: 'https://pt-br.reactjs.org/'
   },
   {
-    text: 'Dolor sit',
-    Component: Element
+    text: 'Javascript',
+    site: 'https://developer.mozilla.org/en-US/docs/Learn/JavaScript'
   },
   {
-    text: 'Amet consectetur',
-    Component: Element
+    text: 'HTML',
+    site: 'https://www.w3schools.com/html/'
+  },
+  {
+    text: 'CSS',
+    site: 'https://www.w3schools.com/css/'
+  },
+  {
+    text: 'Webpack',
+    site: 'https://webpack.js.org/'
+  },
+  {
+    text: 'Babel',
+    site: 'https://babeljs.io/'
   }
 ];
-
-const styles = `
-display: flex;
-flex-direction: column;
-align-items: flex-start;
-`;
 
 const Footer = () => {
   return (
     <Container>
-      {[1, 2].map(elem => (
-        <Column key={elem}>
-          <Title>Lorem ipsun</Title>
-          <List data={LoremIpsun} styles={styles} />
+      <Sized>
+        <Column>
+          <Title>{title}</Title>
+          <List items={partners} />
         </Column>
-      ))}
-      <BackToTop />
+        <BackToTop />
+      </Sized>
     </Container>
   );
 };

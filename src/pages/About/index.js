@@ -8,13 +8,13 @@ import { Container, Author } from './styles';
 const About = () => {
   const github = {
     icon: Github,
-    user: 'vitorthomaz',
+    text: 'vitorthomaz',
     site: 'https://github.com/vitorthomaz'
   };
 
   const linkedin = {
     icon: Linkedin,
-    user: 'vitorthomaz155',
+    text: 'vitorthomaz155',
     site: 'https://www.linkedin.com/in/vitorthomaz155/'
   };
 
@@ -24,12 +24,12 @@ const About = () => {
         <Author>
           <ExternalLink
             icon={github.icon}
-            user={github.user}
+            text={github.text}
             site={github.site}
           />
           <ExternalLink
             icon={linkedin.icon}
-            user={linkedin.user}
+            text={linkedin.text}
             site={linkedin.site}
           />
         </Author>

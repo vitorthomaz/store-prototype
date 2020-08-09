@@ -3,17 +3,17 @@ import proptypes from 'prop-types';
 
 import { Container, Text } from './styles';
 
-const ExternalLink = ({ icon: Icon, user, site }) => {
+const ExternalLink = ({ icon: Icon, text, site }) => {
   return (
     <Container href={site} target="_blank">
       {Icon && <Icon />}
-      <Text>{user}</Text>
+      <Text>{text}</Text>
     </Container>
   );
 };
 
 ExternalLink.propTypes = {
-  user: proptypes.string.isRequired,
+  text: proptypes.string.isRequired,
   site: proptypes.string.isRequired,
   icon: proptypes.elementType
 };

@@ -1,7 +1,6 @@
 export { default as Header } from './Header';
 export { default as Footer } from './Footer';
 export { default as ExternalLink } from './ExternalLink';
-export { default as BackToTop } from './BackToTop';
 export { default as ErrorBoundary } from './ErrorBoundary';
 export { default as LoadingIndicator } from './LoadingIndicator';
 export { default as ProductCard } from './ProductCard';
