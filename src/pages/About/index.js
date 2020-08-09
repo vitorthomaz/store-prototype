@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Github, Linkedin } from '../../assets/icons';
-import { ExternalLink } from '../../components';
+import { ExternalLink, Layout } from '../../components';
 
 import { Container, Author } from './styles';
 
@@ -19,20 +19,22 @@ const About = () => {
   };
 
   return (
-    <Container>
-      <Author>
-        <ExternalLink
-          icon={github.icon}
-          user={github.user}
-          site={github.site}
-        />
-        <ExternalLink
-          icon={linkedin.icon}
-          user={linkedin.user}
-          site={linkedin.site}
-        />
-      </Author>
-    </Container>
+    <Layout>
+      <Container>
+        <Author>
+          <ExternalLink
+            icon={github.icon}
+            user={github.user}
+            site={github.site}
+          />
+          <ExternalLink
+            icon={linkedin.icon}
+            user={linkedin.user}
+            site={linkedin.site}
+          />
+        </Author>
+      </Container>
+    </Layout>
   );
 };
 

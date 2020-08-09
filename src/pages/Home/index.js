@@ -4,6 +4,8 @@ import { useDispatch } from 'react-redux';
 
 import { Container, Input, Form } from './styles';
 
+import { Layout } from '../../components';
+
 import { Search } from '../../assets/icons';
 import { convertToGeo } from '../../services/geocoding';
 import { getPocId } from '../../services/poc';
@@ -19,7 +21,12 @@ const Home = () => {
 
   const [text, setText] = useState('');
 
-  const searchAddress = () => async () => {
+  const searchAddress = async () => {
+    if (text.length === 0) {
+      console.log('Insert something on input');
+      return;
+    }
+
     const geo = await convertToGeo(text);
 
     if (geo.error) {
@@ -52,15 +59,17 @@ const Home = () => {
   };
 
   return (
-    <Container>
-      <Form>
-        <Input
-          placeholder={'Digite aqui seu endereço'}
-          onChange={event => setText(event.target.value)}
-        ></Input>
-        <Search width={size} height={size} onClick={searchAddress()} />
-      </Form>
-    </Container>
+    <Layout>
+      <Container>
+        <Form>
+          <Input
+            placeholder={'Digite aqui seu endereço'}
+            onChange={event => setText(event.target.value)}
+          />
+          <Search width={size} height={size} onClick={searchAddress} />
+        </Form>
+      </Container>
+    </Layout>
   );
 };
 

@@ -1,26 +1,8 @@
-import React from 'react';
-import { Switch, Route } from 'react-router-dom';
-import styled from 'styled-components';
-
 import Home from './pages/Home';
 import Products from './pages/Products';
 import About from './pages/About';
 
 import path from './constants/paths';
-
-const AppRoutes = () => {
-  return (
-    <Container>
-      <Switch>
-        {routes.map(({ path, Component, description }) => (
-          <Route exact path={path} key={description}>
-            <Component />
-          </Route>
-        ))}
-      </Switch>
-    </Container>
-  );
-};
 
 const routes = [
   {
@@ -40,10 +22,4 @@ const routes = [
   }
 ];
 
-const Container = styled.div`
-  background: ${props => props.theme.colors.white};
-
-  padding: ${props => props.theme.spacing.padding.page};
-`;
-
-export default AppRoutes;
+export default routes;

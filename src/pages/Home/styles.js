@@ -6,13 +6,14 @@ export const Container = styled.div`
   align-items: center;
 `;
 
-export const Form = styled.form``;
+export const Form = styled.form`
+  border-bottom: 2px solid black;
+`;
 
 export const Input = styled.input`
   background: inherit;
 
   border: none;
-  border-bottom: 2px solid black;
 
   ::placeholder {
   }
