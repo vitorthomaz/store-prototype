@@ -2,17 +2,15 @@ import React from 'react';
 
 import { Container, Text } from './styles';
 
-import { Icon } from '../../../../assets/icons';
+import { Logo } from '../../../../assets/icons';
 
-const Logo = () => {
-  const size = '40';
-
+const Company = () => {
   return (
     <Container>
-      <Icon width={size} height={size} />
+      <Logo />
       <Text>A Loja Digital</Text>
     </Container>
   );
 };
 
-export default Logo;
+export default Company;
