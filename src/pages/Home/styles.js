@@ -20,7 +20,6 @@ const appear_disapear = keyframes`
 `;
 
 export const Container = styled.div`
-  margin: 0 200px;
   width: 100%;
   height: 100%;
 
@@ -29,8 +28,6 @@ export const Container = styled.div`
   align-items: center;
 
   @media screen and (max-width: ${media.mobile.width}) {
-    margin: 0 32px;
-
     span {
       font-size: 1em;
     }
@@ -38,8 +35,6 @@ export const Container = styled.div`
 
   @media screen and (min-width: ${media.mobile.width}) and (max-width: ${media
       .tablet.width}) {
-    margin: 0 32px;
-
     span {
       font-size: 1.2em;
     }

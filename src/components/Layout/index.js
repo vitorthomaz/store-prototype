@@ -1,16 +1,20 @@
 import React from 'react';
 import proptypes from 'prop-types';
 
-import { Container, Section } from './styles';
+import { Container, Header, Section, Footer } from './styles';
 
-import { Header, Footer } from '../../components';
+import { Header as HeaderChild, Footer as FooterChild } from '../../components';
 
 const Layout = ({ children }) => {
   return (
     <Container>
-      <Header />
+      <Header>
+        <HeaderChild />
+      </Header>
       <Section>{children}</Section>
-      <Footer />
+      <Footer>
+        <FooterChild />
+      </Footer>
     </Container>
   );
 };

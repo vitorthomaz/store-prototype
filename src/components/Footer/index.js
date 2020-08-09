@@ -36,10 +36,8 @@ const partners = [
 const Footer = () => {
   return (
     <Container>
-      <Sized>
-        <BottomNav title={title} items={partners} />
-        <BackToTop />
-      </Sized>
+      <BottomNav title={title} items={partners} />
+      <BackToTop />
     </Container>
   );
 };

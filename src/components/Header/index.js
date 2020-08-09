@@ -24,10 +24,8 @@ const Header = () => {
 
   return (
     <Container>
-      <Sized>
-        <Logo />
-        <Navigation data={buttons} />
-      </Sized>
+      <Logo />
+      <Navigation data={buttons} />
     </Container>
   );
 };
