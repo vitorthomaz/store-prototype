@@ -1,8 +1,6 @@
 import styled from 'styled-components';
 
 export const Container = styled.main`
-  background: ${props => props.theme.colors.white};
-
   height: 100vh;
   display: grid;
 
@@ -17,4 +15,5 @@ export const Container = styled.main`
 
 export const Section = styled.section`
   grid-area: section;
+  background: ${props => props.theme.colors.white};
 `;
