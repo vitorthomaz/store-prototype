@@ -8,7 +8,7 @@ import {
 
 import useProducts from '../../hooks/useProducts';
 
-import { Container } from './styles';
+import { Container, CardGrid } from './styles';
 
 const Products = () => {
   const [products, isLoading, error] = useProducts();
@@ -19,11 +19,13 @@ const Products = () => {
         {isLoading && <LoadingIndicator />}
         {error && <span>Nenhum produto encontrado</span>}
 
-        {!isLoading &&
-          !error &&
-          products.map(({ id, price, title, url }) => (
-            <Card key={id} id={id} price={price} title={title} url={url} />
-          ))}
+        {!isLoading && !error && (
+          <CardGrid>
+            {products.map(({ id, price, title, url }) => (
+              <Card key={id} id={id} price={price} title={title} url={url} />
+            ))}
+          </CardGrid>
+        )}
       </Container>
     </Layout>
   );

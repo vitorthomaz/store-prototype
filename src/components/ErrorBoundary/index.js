@@ -17,8 +17,8 @@ class ErrorBoundary extends Component {
     if (this.state.hasError) {
       return (
         <div>
-          <h2>Algo deu errado :(</h2>
-          <span>Veja o console para mais informações</span>
+          <p>Algo deu errado :(</p>
+          <p>Veja o console para mais informações</p>
         </div>
       );
     }

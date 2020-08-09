@@ -3,7 +3,7 @@ import proptypes from 'prop-types';
 
 import { Card, Image, Title, Price, CartZone } from './styles';
 
-import { GreenZone, RedZone } from '../../components';
+import { GreenZone, RedZone } from './components';
 
 const ProductCard = ({ id, price, title, url }) => {
   return (
@@ -13,12 +13,12 @@ const ProductCard = ({ id, price, title, url }) => {
       <Price>R$ {price.toFixed(2)}</Price>
       <CartZone>
         <RedZone
-          onClick={() => () => {
+          onClick={() => {
             console.log('red');
           }}
         />
         <GreenZone
-          onClick={() => () => {
+          onClick={() => {
             console.log('green');
           }}
         />

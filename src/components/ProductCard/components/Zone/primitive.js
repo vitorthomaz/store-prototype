@@ -3,7 +3,7 @@ import proptypes from 'prop-types';
 import styled from 'styled-components';
 
 export const Clickable = ({ background, invert, onClick, children }) => (
-  <Zone background={background} invert={invert} onClick={onClick()}>
+  <Zone background={background} invert={invert} onClick={onClick}>
     {children}
   </Zone>
 );

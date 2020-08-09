@@ -1,13 +1,13 @@
 import React from 'react';
 import proptypes from 'prop-types';
-import RedZone from './primitive';
+import GreenZone from './primitive';
 
-import { Remove } from '../../assets/icons';
+import { Add } from '../../../../assets/icons';
 
 const ClickableZone = ({ onClick }) => (
-  <RedZone background="#ca4d3f" onClick={onClick}>
-    <Remove />
-  </RedZone>
+  <GreenZone background="#5dc421" invert={true} onClick={onClick}>
+    <Add />
+  </GreenZone>
 );
 
 ClickableZone.propTypes = {

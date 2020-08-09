@@ -1,15 +1,10 @@
 import styled from 'styled-components';
 
 export const Card = styled.div`
-  padding: 3px;
-  margin: 0.5%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
-  width: fit-content;
 
   background: #fafafa;
   border-radius: 6px;
@@ -20,8 +15,8 @@ export const Title = styled.label`
 `;
 
 export const Image = styled.img`
-  height: 100%;
-  width: 10vw;
+  max-width: 100%;
+  display: block;
 `;
 
 export const Price = styled.label``;

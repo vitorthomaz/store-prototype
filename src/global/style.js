@@ -10,5 +10,7 @@ export default createGlobalStyle`
     overflow-y: scroll;
   }
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  * {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
 `;
