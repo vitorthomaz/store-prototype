@@ -10,7 +10,10 @@ module.exports = {
     port: 3000,
     historyApiFallback: true
   },
-  resolve: { extensions: ['.js', '.jsx'] },
+  resolve: {
+    extensions: ['.js', '.jsx'],
+    alias: { src: path.resolve('./src'), global: path.resolve('./src/global') }
+  },
   entry: [path.resolve(__dirname, 'src', 'index.js')],
   output: {
     filename: 'bundle.js',

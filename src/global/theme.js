@@ -10,13 +10,6 @@ const theme = {
   cards: {
     green: '#4F772D',
     red: '#B80C09'
-  },
-  spacing: {
-    padding: {
-      header: '1% 10%',
-      footer: '0 10%',
-      page: '2% 10%'
-    }
   }
 };
 
