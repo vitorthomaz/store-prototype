@@ -26,4 +26,8 @@ export const Container = styled.main`
 export const Section = styled.section`
   grid-area: section;
   background: ${props => props.theme.colors.white};
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;

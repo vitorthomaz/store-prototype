@@ -1,20 +1,75 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { media } from 'global';
+
+const appear_disapear = keyframes`
+  from {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+`;
 
 export const Container = styled.div`
+  margin: 0 200px;
+  width: 100%;
+  height: 100%;
+
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media screen and (max-width: ${media.mobile.width}) {
+    margin: 0 32px;
+
+    span {
+      font-size: 1em;
+    }
+  }
+
+  @media screen and (min-width: ${media.mobile.width}) and (max-width: ${media
+      .tablet.width}) {
+    margin: 0 32px;
+
+    span {
+      font-size: 1.2em;
+    }
+  }
 `;
 
-export const Form = styled.form`
-  border-bottom: 2px solid black;
+export const SearchBar = styled.div`
+  width: 450px;
+
+  @media screen and (max-width: ${media.mobile.width}) {
+    width: 250px;
+  }
+
+  @media screen and (min-width: ${media.mobile.width}) and (max-width: ${media
+      .tablet.width}) {
+    width: 350px;
+  }
 `;
 
-export const Input = styled.input`
-  background: inherit;
+export const ProblemIndicator = styled.span`
+  animation: ${appear_disapear} 1s;
 
-  border: none;
+  font-size: 2em;
 
-  ::placeholder {
+  @media screen and (max-width: ${media.mobile.width}) {
+    font-size: 1em;
+  }
+
+  @media screen and (min-width: ${media.mobile.width}) and (max-width: ${media
+      .tablet.width}) {
+    font-size: 1.2em;
   }
 `;
