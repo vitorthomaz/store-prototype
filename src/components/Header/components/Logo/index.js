@@ -2,10 +2,11 @@ import React from 'react';
 
 import { Container, Text } from './styles';
 
-import { Icon } from '../../assets/icons';
-const size = '60';
+import { Icon } from '../../../../assets/icons';
 
 const Logo = () => {
+  const size = '40';
+
   return (
     <Container>
       <Icon width={size} height={size} />

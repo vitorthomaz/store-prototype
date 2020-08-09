@@ -1,23 +1,18 @@
 import styled from 'styled-components';
 
-export const Container = styled.div`
+export const Container = styled.header`
+  grid-area: header;
   background: ${props => props.theme.colors.yellow};
+`;
 
-  padding: ${props => props.theme.spacing.padding.header};
+export const Sized = styled.div`
+  margin: 0 12%;
+  height: 100%;
+  /* First break point */
+  min-width: 400px;
 
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: space-between;
-`;
-
-export const Link = styled.li`
-  list-style-type: none;
-  cursor: pointer;
-
-  font-size: 1.3em;
-
-  :hover {
-    font-weight: bold;
-  }
+  align-items: center;
 `;

@@ -2,9 +2,11 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
+`;
 
-  ${props => props.styles}
+export const Text = styled.label`
+  margin: 3px;
 `;

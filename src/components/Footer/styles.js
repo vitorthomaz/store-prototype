@@ -1,9 +1,7 @@
 import styled from 'styled-components';
 
 export const Container = styled.footer`
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  grid-area: footer;
 
   padding: ${props => props.theme.spacing.padding.footer};
 
