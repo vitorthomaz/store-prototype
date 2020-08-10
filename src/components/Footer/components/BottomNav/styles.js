@@ -8,32 +8,11 @@ export const Container = styled.nav`
   align-items: center;
 
   label {
-    font-size: 1.5em;
+    font-size: 1.5rem;
   }
 
   a {
-    font-size: 1em;
-  }
-
-  @media screen and (max-width: ${media.mobile.width}) {
-    label {
-      font-size: 0.8em;
-    }
-
-    a {
-      font-size: 0.6em;
-    }
-  }
-
-  @media screen and (min-width: ${media.mobile.width}) and (max-width: ${media
-      .tablet.width}) {
-    label {
-      font-size: 1em;
-    }
-
-    a {
-      font-size: 0.7em;
-    }
+    font-size: 1rem;
   }
 
   @media screen and (max-width: ${media.tablet.width}) {
@@ -44,16 +23,13 @@ export const Container = styled.nav`
 export const Title = styled.label``;
 
 export const List = styled.ul`
-  display: flex;
-  flex-direction: column;
-
-  @media screen and (max-width: ${media.tablet.width}) {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-  }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 `;
 
 export const Item = styled.li`
+  padding: 4px;
+
   a {
     margin: 2px;
   }
