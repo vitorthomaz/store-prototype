@@ -20,25 +20,13 @@ const appear_disapear = keyframes`
 `;
 
 export const Container = styled.div`
-  width: 100%;
+  margin: 0 auto;
   height: 100%;
+  max-width: 1024px;
 
   display: flex;
   justify-content: center;
   align-items: center;
-
-  @media screen and (max-width: ${media.mobile.width}) {
-    span {
-      font-size: 1em;
-    }
-  }
-
-  @media screen and (min-width: ${media.mobile.width}) and (max-width: ${media
-      .tablet.width}) {
-    span {
-      font-size: 1.2em;
-    }
-  }
 `;
 
 export const SearchBar = styled.div`
@@ -55,16 +43,10 @@ export const SearchBar = styled.div`
 `;
 
 export const ProblemIndicator = styled.span`
-  animation: ${appear_disapear} 1s;
+  position: absolute;
+  opacity: ${props => (props.opacity ? 1 : 0)};
+  transition: opacity 0.4s;
 
-  font-size: 2em;
-
-  @media screen and (max-width: ${media.mobile.width}) {
-    font-size: 1em;
-  }
-
-  @media screen and (min-width: ${media.mobile.width}) and (max-width: ${media
-      .tablet.width}) {
-    font-size: 1.2em;
-  }
+  font-size: 0.75rem;
+  color: red;
 `;

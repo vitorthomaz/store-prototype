@@ -72,12 +72,14 @@ const Home = () => {
         {isLoading && <LoadingIndicator />}
         {!isLoading && (
           <SearchBar>
-            {error.length > 0 && <ProblemIndicator>{error}</ProblemIndicator>}
             <AddressInput
               setText={setText}
               resetInput={resetInput}
               onClick={handleOnClick}
             />
+            <ProblemIndicator opacity={error.length > 0}>
+              {error}
+            </ProblemIndicator>
           </SearchBar>
         )}
       </Container>

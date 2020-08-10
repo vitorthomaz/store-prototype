@@ -2,7 +2,9 @@ import styled from 'styled-components';
 import { media } from 'global';
 
 export const Container = styled.div`
-  width: 100%;
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1024px;
 
   display: flex;
   flex-direction: row;

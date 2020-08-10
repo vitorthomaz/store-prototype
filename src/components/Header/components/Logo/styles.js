@@ -9,14 +9,6 @@ export const Container = styled.div`
 
   svg {
     width: 70px;
-    height: 70px;
-  }
-
-  @media screen and (max-width: ${media.tablet.width}) {
-    svg {
-      width: 50px;
-      height: 50px;
-    }
   }
 `;
 

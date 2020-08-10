@@ -1,9 +1,9 @@
 const media = {
   mobile: {
-    width: '500px'
+    width: '562px'
   },
   tablet: {
-    width: '768px'
+    width: '1024px'
   }
 };
 
