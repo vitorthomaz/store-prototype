@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack --mode production",
     "start": "webpack-dev-server --open",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --watch"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,9 @@
     "@babel/preset-env": "^7.11.0",
     "@babel/preset-react": "^7.10.4",
     "@babel/runtime": "^7.11.2",
+    "@testing-library/jest-dom": "^5.11.2",
+    "@testing-library/react": "^10.4.8",
+    "babel-jest": "^26.3.0",
     "babel-loader": "^8.1.0",
     "babel-plugin-styled-components": "^1.11.1",
     "css-loader": "^4.2.0",
@@ -35,6 +38,7 @@
     "eslint-plugin-react-hooks": "^4.0.8",
     "html-loader": "^1.1.0",
     "html-webpack-plugin": "^4.3.0",
+    "jest": "^26.3.0",
     "prettier": "^2.0.5",
     "prop-types": "^15.7.2",
     "style-loader": "^1.2.1",
