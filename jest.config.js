@@ -7,6 +7,7 @@ module.exports = {
     '\\.(js|jsx)?$': 'babel-jest'
   },
   moduleFileExtensions: ['js', 'jsx', 'json', 'node'],
+  moduleDirectories: ['node_modules'],
   testPathIgnorePatterns: ['/node_modules/', '/public/'],
   setupFilesAfterEnv: ['<rootDir>/setUpTests.js'],
   clearMocks: true
