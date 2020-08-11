@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from 'global';
+import { media } from '../../../../global';
 
 export const Container = styled.nav`
   display: flex;
@@ -15,7 +15,7 @@ export const Container = styled.nav`
     font-size: 1rem;
   }
 
-  @media screen and (max-width: ${media.tablet.width}) {
+  @media screen and (max-width: ${media.tablet}) {
     justify-content: center;
   }
 `;

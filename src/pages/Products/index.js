@@ -8,7 +8,7 @@ import {
 
 import useProducts from '../../hooks/useProducts';
 
-import { Container, CardGrid } from './styles';
+import { Container, Title, CardGrid } from './styles';
 
 const Products = () => {
   const [products, isLoading, error] = useProducts();
@@ -16,6 +16,7 @@ const Products = () => {
   return (
     <Layout>
       <Container>
+        <Title>Lista de Produtos</Title>
         {isLoading && <LoadingIndicator />}
         {error && <span>Nenhum produto encontrado</span>}
 

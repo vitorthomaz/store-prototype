@@ -1,10 +1,6 @@
 const media = {
-  mobile: {
-    width: '562px'
-  },
-  tablet: {
-    width: '1024px'
-  }
+  mobile: '562px',
+  tablet: '1024px'
 };
 
 export default media;

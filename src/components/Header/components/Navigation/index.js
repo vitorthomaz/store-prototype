@@ -20,9 +20,9 @@ const Navigataion = ({ data }) => {
 Navigataion.propTypes = {
   data: proptypes.arrayOf(
     proptypes.shape({
-      description: proptypes.string,
-      text: proptypes.string,
-      action: proptypes.func
+      description: proptypes.string.isRequired,
+      text: proptypes.string.isRequired,
+      action: proptypes.func.isRequired
     })
   ).isRequired
 };

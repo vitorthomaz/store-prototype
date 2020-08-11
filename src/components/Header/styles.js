@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { media } from 'global';
 
 export const Container = styled.div`
   margin: 0 auto;

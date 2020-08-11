@@ -6,7 +6,7 @@ import { Container, Text } from './styles';
 const ExternalLink = ({ icon: Icon, text, site }) => {
   return (
     <Container href={site} target="_blank">
-      {Icon && <Icon />}
+      {Icon && <Icon data-testid="link-icon" />}
       <Text>{text}</Text>
     </Container>
   );

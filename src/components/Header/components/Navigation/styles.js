@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from 'global';
+import { media } from '../../../../global';
 
 export const Container = styled.ul`
   display: flex;
@@ -18,12 +18,11 @@ export const Item = styled.li`
     text-decoration: underline;
   }
 
-  @media screen and (max-width: ${media.mobile.width}) {
+  @media screen and (max-width: ${media.mobile}) {
     margin: 10px 15px;
   }
 
-  @media screen and (min-width: ${media.mobile.width}) and (max-width: ${media
-      .tablet.width}) {
+  @media screen and (min-width: ${media.mobile}) and (max-width: ${media.tablet}) {
     margin: 15px 30px;
   }
 `;

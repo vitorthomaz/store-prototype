@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { media } from 'global';
 
 export const Card = styled.article`
   display: flex;
@@ -7,16 +6,21 @@ export const Card = styled.article`
   justify-content: space-between;
   align-items: center;
 
+  width: 100%;
+  height: 100%;
+
   background: #fafafa;
-  border: 5px solid #ebebeb;
   border-radius: 6px;
+  transition: all 500ms;
+
+  :hover {
+    transform: scale(1.2);
+  }
 `;
 
 export const Image = styled.img`
   width: 100%;
 `;
-
-// export const Hr = styled.hr``;
 
 export const Infos = styled.div`
   display: flex;

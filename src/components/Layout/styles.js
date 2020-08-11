@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from 'global';
+import { media } from '../../global';
 
 export const Container = styled.main`
   height: 100vh;
@@ -13,12 +13,11 @@ export const Container = styled.main`
     'section'
     'footer';
 
-  @media screen and (max-width: ${media.mobile.width}) {
+  @media screen and (max-width: ${media.mobile}) {
     grid-template-rows: 100px 1fr 100px;
   }
 
-  @media screen and (min-width: ${media.mobile.width}) and (max-width: ${media
-      .tablet.width}) {
+  @media screen and (min-width: ${media.mobile}) and (max-width: ${media.tablet}) {
     grid-template-rows: 120px 1fr 120px;
   }
 `;
@@ -37,7 +36,7 @@ export const Footer = styled.footer`
   grid-area: footer;
   background: ${props => props.theme.colors.lightGray};
 
-  @media screen and (max-width: ${media.tablet.width}) {
+  @media screen and (max-width: ${media.tablet}) {
     div > a {
       display: none;
     }
