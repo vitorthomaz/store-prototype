@@ -14,7 +14,7 @@ export const Card = styled.article`
   transition: all 500ms;
 
   :hover {
-    transform: scale(1.2);
+    transform: scale(1.02);
   }
 `;
 
@@ -38,5 +38,12 @@ export const CartZone = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   width: 100%;
+`;
+
+export const Quantity = styled.h3`
+  margin: 0 1em;
+  font-size: 1em;
+  font-weight: normal;
 `;
