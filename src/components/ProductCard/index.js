@@ -1,5 +1,5 @@
 import React, { useCallback, useState } from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import proptypes from 'prop-types';
 
 import { Card, Image, Infos, Title, Price, CartZone, Quantity } from './styles';
@@ -9,8 +9,11 @@ import { GreenZone, RedZone } from './components';
 import { addProduct, removeProduct } from '../../store/actions/shopping';
 
 const ProductCard = ({ id, price, title, url }) => {
+  const shopping = useSelector(state => state.shopping);
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(0);
+  const [quantity, setQuantity] = useState(
+    shopping.filter(elem => elem.id === id).length
+  );
 
   const remove = useCallback(
     id => {
