@@ -16,9 +16,9 @@ const Header = () => {
       action: () => history.push(path.HOME)
     },
     {
-      description: 'Goes to About Page',
+      description: 'Goes to Checkout Page',
       icon: Cart,
-      action: () => history.push(path.ABOUT)
+      action: () => history.push(path.CHECKOUT)
     }
   ];
 
