@@ -1,9 +1,9 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { Navigation, Logo } from './components';
+import { Navigation, Logo, Cart } from './components';
 
-import { Container, Sized } from './styles';
+import { Container } from './styles';
 
 import path from '../../constants/paths';
 
@@ -17,7 +17,7 @@ const Header = () => {
     },
     {
       description: 'Goes to About Page',
-      text: 'Sobre',
+      icon: Cart,
       action: () => history.push(path.ABOUT)
     }
   ];

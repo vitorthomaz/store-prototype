@@ -10,6 +10,7 @@ export const Container = styled.ul`
 
 export const Item = styled.li`
   margin: 20px 40px;
+  font-size: 1rem;
 
   list-style-type: none;
   cursor: pointer;
