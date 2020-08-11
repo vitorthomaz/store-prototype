@@ -1,9 +1,10 @@
 import { createStore } from 'redux';
 
-import reducers from './reducers';
+import reducers, { pocState, shoppingState } from './reducers';
 
 export const initialState = {
-  poc: ''
+  poc: pocState,
+  shopping: shoppingState
 };
 
 export default createStore(reducers, initialState);

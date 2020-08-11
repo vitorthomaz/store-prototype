@@ -1,5 +1,8 @@
 import { combineReducers } from 'redux';
 
-import poc from './poc';
+import poc, { initialState as pocState } from './poc';
+import shopping, { initialState as shoppingState } from './shopping';
 
-export default combineReducers({ poc });
+export { pocState, shoppingState };
+
+export default combineReducers({ poc, shopping });
