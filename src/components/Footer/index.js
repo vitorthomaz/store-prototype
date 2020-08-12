@@ -1,43 +1,28 @@
 import React from 'react';
 
-import { BackToTop, BottomNav } from './components';
+import { BottomNav } from './components';
+import { ExternalLink } from '../../components';
 
-import { Container, Sized } from './styles';
+import { Container, Author } from './styles';
 
-const title = 'RECURSOS';
-
-const partners = [
-  {
-    text: 'React',
-    site: 'https://pt-br.reactjs.org/'
-  },
-  {
-    text: 'Javascript',
-    site: 'https://developer.mozilla.org/en-US/docs/Learn/JavaScript'
-  },
-  {
-    text: 'HTML',
-    site: 'https://www.w3schools.com/html/'
-  },
-  {
-    text: 'CSS',
-    site: 'https://www.w3schools.com/css/'
-  },
-  {
-    text: 'Webpack',
-    site: 'https://webpack.js.org/'
-  },
-  {
-    text: 'Babel',
-    site: 'https://babeljs.io/'
-  }
-];
+import { title, partners, linkedin, github } from './data';
 
 const Footer = () => {
   return (
     <Container>
       <BottomNav title={title} items={partners} />
-      <BackToTop />
+      <Author>
+        <ExternalLink
+          icon={github.icon}
+          text={github.text}
+          site={github.site}
+        />
+        <ExternalLink
+          icon={linkedin.icon}
+          text={linkedin.text}
+          site={linkedin.site}
+        />
+      </Author>
     </Container>
   );
 };

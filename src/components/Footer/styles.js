@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { whenMobile, whenTablet } from '../../global/media';
 
 export const Container = styled.div`
   margin: 0 auto;
@@ -9,4 +10,8 @@ export const Container = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+`;
+
+export const Author = styled.div`
+  width: fit-content;
 `;
