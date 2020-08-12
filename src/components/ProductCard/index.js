@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import proptypes from 'prop-types';
 
@@ -11,9 +11,12 @@ import { addProduct, removeProduct } from '../../store/actions/shopping';
 const ProductCard = ({ id, price, title, url }) => {
   const shopping = useSelector(state => state.shopping);
   const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(
-    shopping.filter(elem => elem.id === id).length
-  );
+
+  const [quantity, setQuantity] = useState(0);
+
+  useEffect(() => {
+    setQuantity(shopping.filter(elem => elem.id === id).length);
+  }, [shopping, id]);
 
   const remove = useCallback(
     id => {
@@ -59,8 +62,7 @@ ProductCard.propTypes = {
   id: proptypes.string.isRequired,
   price: proptypes.number.isRequired,
   title: proptypes.string.isRequired,
-  url: proptypes.string.isRequired,
-  quantity: proptypes.number
+  url: proptypes.string.isRequired
 };
 
 export default ProductCard;
