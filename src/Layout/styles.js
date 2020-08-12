@@ -19,7 +19,11 @@ export const Container = styled.main`
 
 export const Header = styled.header`
   grid-area: header;
-  background: ${props => props.theme.colors.yellow};
+  background: ${props => props.theme.colors.black};
+
+  * {
+    color: ${props => props.theme.colors.label};
+  }
 `;
 
 export const Section = styled.section`
@@ -29,5 +33,5 @@ export const Section = styled.section`
 
 export const Footer = styled.footer`
   grid-area: footer;
-  background: ${props => props.theme.colors.lightGray};
+  background: ${props => props.theme.colors.yellow};
 `;

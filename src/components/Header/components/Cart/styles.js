@@ -12,6 +12,7 @@ export const Counter = styled.label`
   height: 18px;
 
   font-size: 14px;
-  background: ${props => props.theme.colors.yellow};
   border-radius: 100%;
+
+  background: ${props => props.theme.colors.black};
 `;

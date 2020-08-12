@@ -3,9 +3,10 @@ import proptypes from 'prop-types';
 import GreenZone from './primitive';
 
 import { Add } from '../../../../assets/icons';
+import { theme } from '../../../../global';
 
 const ClickableZone = ({ testid, onClick }) => (
-  <GreenZone background="#5dc421" onClick={onClick}>
+  <GreenZone background={theme.cards.green} onClick={onClick}>
     <div data-testid={testid}>
       <Add />
     </div>
@@ -13,7 +14,7 @@ const ClickableZone = ({ testid, onClick }) => (
 );
 
 ClickableZone.propTypes = {
-  id: proptypes.string,
+  testid: proptypes.string,
   onClick: proptypes.func.isRequired
 };
 

@@ -3,9 +3,10 @@ import proptypes from 'prop-types';
 import RedZone from './primitive';
 
 import { Remove } from '../../../../assets/icons';
+import { theme } from '../../../../global';
 
 const ClickableZone = ({ testid, onClick }) => (
-  <RedZone background="#ca4d3f" onClick={onClick}>
+  <RedZone background={theme.cards.red} onClick={onClick}>
     <div data-testid={testid}>
       <Remove />
     </div>

@@ -1,11 +1,10 @@
 const theme = {
   colors: {
     yellow: '#F9C22E',
-    black: '#0C090D',
+    black: '#404040',
     white: '#EBEBEB',
-    green: '#8FC0A9',
-    blue: '#68B0AB',
-    lightGray: '#BDB4B2'
+    green: '#10DCAB',
+    label: '#F5F5F5'
   },
   cards: {
     green: '#4F772D',
