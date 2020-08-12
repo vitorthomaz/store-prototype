@@ -13,7 +13,8 @@ describe('Testing functionalities of <Navigation />', () => {
       {
         description: 'Any page change',
         text: 'Trocar de pagina',
-        action: changePage
+        action: changePage,
+        key: 'trocar'
       }
     ];
     render(<Navigation data={data} />);

@@ -1,11 +1,8 @@
 import React from 'react';
 import userEvent from '@testing-library/user-event';
-import {
-  render,
-  screen,
-  cleanup,
-  waitFor
-} from '../../utils/testing-redux-wrapper';
+import { screen, cleanup, waitFor } from '@testing-library/react';
+
+import { renderWithRedux } from '../../utils/testing-wrapper';
 
 import AddressInput from './';
 import { GEO_EMPTY, POC_EMPTY } from '../../constants/services';
@@ -25,7 +22,7 @@ import {
   geoFromAnywhere,
   geoFromPoc,
   pocAddress
-} from './index.mocks';
+} from './index.mock';
 
 describe('Testing functionalities of <AddressInput />', () => {
   afterEach(() => {
@@ -34,7 +31,7 @@ describe('Testing functionalities of <AddressInput />', () => {
   });
 
   it('should render what the user types', () => {
-    render(<AddressInput changePage={changePage} />);
+    renderWithRedux(<AddressInput changePage={changePage} />);
 
     const input = screen.getByRole('textbox');
     userEvent.type(input, gibberish);
@@ -43,7 +40,7 @@ describe('Testing functionalities of <AddressInput />', () => {
   });
 
   it('should ask for input if user clicks button without any input value', () => {
-    render(<AddressInput changePage={changePage} />);
+    renderWithRedux(<AddressInput changePage={changePage} />);
 
     const button = screen.getByRole('button');
 
@@ -55,7 +52,7 @@ describe('Testing functionalities of <AddressInput />', () => {
   it('should warn user has entered an invalid address', async () => {
     convertToGeo.mockResolvedValueOnce(geoInvalidAddress);
 
-    render(<AddressInput changePage={changePage} />);
+    renderWithRedux(<AddressInput changePage={changePage} />);
 
     const input = screen.getByRole('textbox');
     const button = screen.getByRole('button');
@@ -72,7 +69,7 @@ describe('Testing functionalities of <AddressInput />', () => {
     convertToGeo.mockResolvedValueOnce(geoFromAnywhere);
     getPocId.mockResolvedValueOnce(POC_EMPTY);
 
-    render(<AddressInput changePage={changePage} />);
+    renderWithRedux(<AddressInput changePage={changePage} />);
 
     const input = screen.getByRole('textbox');
     const button = screen.getByRole('button');
@@ -89,7 +86,7 @@ describe('Testing functionalities of <AddressInput />', () => {
     convertToGeo.mockResolvedValueOnce(geoFromPoc);
     getPocId.mockResolvedValueOnce({ id: '654' });
 
-    render(<AddressInput changePage={changePage} />);
+    renderWithRedux(<AddressInput changePage={changePage} />);
 
     const input = screen.getByRole('textbox');
     const button = screen.getByRole('button');
