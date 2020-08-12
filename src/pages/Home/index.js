@@ -3,7 +3,8 @@ import { useHistory } from 'react-router-dom';
 
 import { Container } from './styles';
 
-import { Layout, AddressInput, LoadingIndicator } from '../../components';
+import { AddressInput } from '../../components';
+import Layout from '../../Layout';
 
 import paths from '../../constants/paths';
 

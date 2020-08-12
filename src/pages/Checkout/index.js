@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-import { Layout, LoadingIndicator, Table } from '../../components';
+import { LoadingIndicator, Table } from '../../components';
+import Layout from '../../Layout';
 
 import { Container, Title } from './styles';
 

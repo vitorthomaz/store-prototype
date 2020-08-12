@@ -3,7 +3,7 @@ import proptypes from 'prop-types';
 
 import { Container, Header, Section, Footer } from './styles';
 
-import { Header as HeaderChild, Footer as FooterChild } from '../../components';
+import { Header as HeaderChild, Footer as FooterChild } from '../components';
 
 const Layout = ({ children }) => {
   return (

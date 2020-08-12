@@ -1,10 +1,8 @@
 import React from 'react';
 
-import {
-  LoadingIndicator,
-  ProductCard as Card,
-  Layout
-} from '../../components';
+import { LoadingIndicator, ProductCard as Card } from '../../components';
+
+import Layout from '../../Layout';
 
 import useProducts from '../../hooks/useProducts';
 

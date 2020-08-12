@@ -7,11 +7,13 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 `;
 
-export const Title = styled.h2``;
+export const Title = styled.h2`
+  padding: 2rem 0;
+`;
 
 export const CardGrid = styled.div`
   width: 90%;
