@@ -16,7 +16,6 @@ const useProducts = () => {
       const { products: prodList, error } = await getProducts(pocId);
 
       if (error) {
-        console.log(error);
         setError(true);
         setIsLoading(false);
         return;

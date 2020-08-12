@@ -24,7 +24,7 @@ export const POC_REQUEST_ERROR = {
     'Houve um problema! Verifique sua conexão com a internet e tente novamente'
 };
 
-export const PRODUCT_EMPTY = { empty: 'Não há produtos neste distribuidor' };
+export const PRODUCT_EMPTY = { error: 'Não há produtos neste distribuidor' };
 export const PRODUCT_VALIDATION_ERROR = {
   error: 'Invalid parameters on Product request.'
 };
