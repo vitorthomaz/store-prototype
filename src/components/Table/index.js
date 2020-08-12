@@ -1,9 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import proptypes from 'prop-types';
 
 import { Container } from './styles';
 
 const Table = ({ data }) => {
+  const shoppingTotal = data.reduce((acc, { total }) => acc + Number(total), 0);
+
   return (
     <Container data-testid="shopping-cart-products">
       <thead>
@@ -24,6 +26,12 @@ const Table = ({ data }) => {
           </tr>
         ))}
       </tbody>
+      <tfoot>
+        <td></td>
+        <td></td>
+        <td>Total do pedido</td>
+        <td>R$ {shoppingTotal.toFixed(2)}</td>
+      </tfoot>
     </Container>
   );
 };
