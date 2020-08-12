@@ -1,23 +1,15 @@
 import React from 'react';
-import proptypes from 'prop-types';
 
-import { Container, Rotation } from './styles';
+import { Loop } from '../../assets/icons';
 
-const Spinner = ({ spinSize, spinColor }) => {
+import { Container } from './styles';
+
+const Spinner = () => {
   return (
     <Container>
-      <Rotation spinSize={spinSize / 6} spinColor={spinColor} />
+      <Loop />
     </Container>
   );
-};
-
-Spinner.propTypes = {
-  spinColor: proptypes.string.isRequired,
-  spinSize: proptypes.number
-};
-
-Spinner.defaultProps = {
-  spinSize: 48
 };
 
 export default Spinner;

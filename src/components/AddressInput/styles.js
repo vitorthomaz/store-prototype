@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from '../../global';
+import { whenMobile, whenTablet } from '../../global/media';
 
 export const Form = styled.form`
   border-bottom: 4px solid black;
@@ -8,29 +8,15 @@ export const Form = styled.form`
   align-items: flex-end;
   width: 100%;
 
-  @media screen and (max-width: ${media.mobile}) {
-    input {
-      font-size: 1.2em;
-    }
-  }
-
-  @media screen and (min-width: ${media.mobile}) and (max-width: ${media.tablet}) {
-    input {
-      font-size: 1.7em;
-    }
-  }
+  ${whenMobile('input {font-size: 1.2em;}')};
+  ${whenTablet('input {font-size: 1.7em;}')}
 `;
 
 export const SearchBar = styled.div`
   width: 450px;
 
-  @media screen and (max-width: ${media.mobile}) {
-    width: 250px;
-  }
-
-  @media screen and (min-width: ${media.mobile}) and (max-width: ${media.tablet}) {
-    width: 350px;
-  }
+  ${whenMobile('width: 250px;')}
+  ${whenTablet('width: 350px;')}
 `;
 
 export const Input = styled.input`
@@ -48,29 +34,23 @@ export const Loader = styled.div`
 
   cursor: pointer;
 
-  width: 48px;
-  height: 48px;
-
-  @media screen and (max-width: ${media.mobile}) {
-    width: 24px;
-    height: 24px;
-  }
-
-  @media screen and (min-width: ${media.mobile}) and (max-width: ${media.tablet}) {
-    width: 36px;
-    height: 36px;
-  }
-`;
-
-export const Button = styled.button`
-  border: none;
-  width: 100%;
-  height: 100%;
-
   svg {
     width: 100%;
     height: 100%;
   }
+
+  width: 48px;
+
+  ${whenMobile('width: 32px;')}
+  ${whenTablet('width: 40px;')}
+`;
+
+export const Button = styled.button`
+  border: none;
+  background: transparent;
+
+  width: 100%;
+  height: 100%;
 `;
 
 export const ProblemIndicator = styled.span`

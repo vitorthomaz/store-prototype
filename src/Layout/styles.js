@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from '../../global';
+import { whenTablet, whenMobile } from '../global/media';
 
 export const Container = styled.main`
   height: 100vh;
@@ -13,13 +13,8 @@ export const Container = styled.main`
     'section'
     'footer';
 
-  @media screen and (max-width: ${media.mobile}) {
-    grid-template-rows: 100px 1fr minmax(130px, auto);
-  }
-
-  @media screen and (min-width: ${media.mobile}) and (max-width: ${media.tablet}) {
-    grid-template-rows: 120px 1fr minmax(150px, auto);
-  }
+  ${whenMobile('grid-template-rows: 100px 1fr minmax(130px, auto);')}
+  ${whenTablet('grid-template-rows: 120px 1fr minmax(150px, auto);')}
 `;
 
 export const Header = styled.header`

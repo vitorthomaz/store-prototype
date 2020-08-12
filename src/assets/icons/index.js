@@ -6,3 +6,4 @@ export { default as Add } from './add';
 export { default as Remove } from './remove';
 export { default as Shopping } from './shopping';
 export { default as Home } from './home';
+export { default as Loop } from './loop';

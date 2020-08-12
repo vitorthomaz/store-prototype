@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { media } from '../../../../global';
+import { whenTablet } from '../../../../global/media';
 
 export const Container = styled.nav`
   display: flex;
@@ -7,20 +7,12 @@ export const Container = styled.nav`
   justify-content: flex-start;
   align-items: center;
 
-  label {
-    font-size: 1.5rem;
-  }
-
-  a {
-    font-size: 1rem;
-  }
-
-  @media screen and (max-width: ${media.tablet}) {
-    justify-content: center;
-  }
+  ${whenTablet('justify-content: center;')}
 `;
 
-export const Title = styled.label``;
+export const Title = styled.label`
+  font-size: 1.5em;
+`;
 
 export const List = styled.ul`
   display: grid;
@@ -29,8 +21,10 @@ export const List = styled.ul`
 
 export const Item = styled.li`
   padding: 4px;
+  list-style-type: none;
 
   a {
+    font-size: 1em;
     margin: 2px;
   }
 
@@ -38,7 +32,6 @@ export const Item = styled.li`
     margin: 0;
   }
 
-  list-style-type: none;
   :hover {
     text-decoration: underline;
   }

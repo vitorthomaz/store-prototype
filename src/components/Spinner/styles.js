@@ -11,20 +11,13 @@ const rotation = keyframes`
 `;
 
 export const Container = styled.div`
-  width: fit-content;
-  height: fit-content;
+  width: 100%;
+  height: 100%;
 
   display: flex;
   justify-content: center;
   align-items: center;
-`;
 
-export const Rotation = styled.div`
-  padding: ${props => props.spinSize}px;
-  border: ${props => props.spinSize}px solid ${props => props.spinColor};
-  border-top: ${props => props.spinSize}px solid transparent;
-  border-radius: 100%;
-
-  animation: ${rotation} 0.5s;
+  animation: ${rotation} 0.7s;
   animation-iteration-count: infinite;
 `;

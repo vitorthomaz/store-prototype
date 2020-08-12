@@ -73,7 +73,7 @@ const AddressInput = ({ changePage }) => {
               <Search />
             </Button>
           ) : (
-            <Spinner spinColor={'#000'} spinSize={48} />
+            <Spinner />
           )}
         </Loader>
       </Form>
