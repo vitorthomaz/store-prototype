@@ -1,6 +1,6 @@
 import { SET_POC } from '../actions/poc';
 
-export const initialState = '532';
+export const initialState = '';
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
