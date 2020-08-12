@@ -8,7 +8,7 @@ const Navigation = ({ data }) => {
     <nav>
       <Container>
         {data.map(({ text, icon: Icon, description, action }) => (
-          <Item key={description} onClick={action}>
+          <Item title={description} key={description} onClick={action}>
             {text}
             {Icon && <Icon />}
           </Item>

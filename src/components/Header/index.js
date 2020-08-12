@@ -2,6 +2,7 @@ import React from 'react';
 import { useHistory } from 'react-router-dom';
 
 import { Navigation, Logo, Cart } from './components';
+import { Home } from '../../assets/icons';
 
 import { Container } from './styles';
 
@@ -11,12 +12,12 @@ const Header = () => {
   const history = useHistory();
   const buttons = [
     {
-      description: 'Goes to Home Page',
-      text: 'Início',
+      description: 'Início',
+      icon: Home,
       action: () => history.push(path.HOME)
     },
     {
-      description: 'Goes to Checkout Page',
+      description: 'Carrinho',
       icon: Cart,
       action: () => history.push(path.CHECKOUT)
     }

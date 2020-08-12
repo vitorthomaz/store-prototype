@@ -1,11 +1,20 @@
 import styled from 'styled-components';
-import { media } from '../../../../global';
+import { whenMobile, whenTablet } from '../../../../global/media';
 
 export const Container = styled.ul`
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  svg {
+    width: 54px;
+    height: 54px;
+  }
+
+  ${whenMobile('svg {width: 40px; height: 40px;}')}
+
+  ${whenTablet('svg {width: 48px; height: 48px;}')}
 `;
 
 export const Item = styled.li`
@@ -19,11 +28,7 @@ export const Item = styled.li`
     text-decoration: underline;
   }
 
-  @media screen and (max-width: ${media.mobile}) {
-    margin: 10px 15px;
-  }
+  ${whenMobile('margin: 10px 15px;')}
 
-  @media screen and (min-width: ${media.mobile}) and (max-width: ${media.tablet}) {
-    margin: 15px 30px;
-  }
+  ${whenTablet('margin: 15px 30px;')}
 `;
