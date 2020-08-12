@@ -5,7 +5,7 @@ import GreenZone from './primitive';
 import { Add } from '../../../../assets/icons';
 
 const ClickableZone = ({ onClick }) => (
-  <GreenZone background="#5dc421" invert={true} onClick={onClick}>
+  <GreenZone background="#5dc421" onClick={onClick}>
     <Add />
   </GreenZone>
 );
