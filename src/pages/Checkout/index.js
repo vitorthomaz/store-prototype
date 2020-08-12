@@ -33,9 +33,11 @@ const ShoppingCart = () => {
   return (
     <Layout>
       <Container>
-        <Title>Finalizar pedido</Title>
+        <Title data-testid="checkout-title">Finalizar pedido</Title>
         {isLoading && <LoadingIndicator />}
-        {!isLoading && data.length === 0 && <h3>Seu carrinho está vazio :(</h3>}
+        {!isLoading && data.length === 0 && (
+          <h3 data-testid="empty-cart">Seu carrinho está vazio :(</h3>
+        )}
         {!isLoading && data.length > 0 && <Table data={data} />}
       </Container>
     </Layout>

@@ -4,13 +4,16 @@ import RedZone from './primitive';
 
 import { Remove } from '../../../../assets/icons';
 
-const ClickableZone = ({ onClick }) => (
+const ClickableZone = ({ testid, onClick }) => (
   <RedZone background="#ca4d3f" onClick={onClick}>
-    <Remove />
+    <div data-testid={testid}>
+      <Remove />
+    </div>
   </RedZone>
 );
 
 ClickableZone.propTypes = {
+  testid: proptypes.string,
   onClick: proptypes.func.isRequired
 };
 

@@ -63,6 +63,7 @@ const AddressInput = ({ changePage }) => {
     <SearchBar>
       <Form onSubmit={onSubmit}>
         <Input
+          data-testid="user-input"
           placeholder={'Digite aqui seu endereço'}
           onChange={event => setText(event.target.value)}
           value={text}

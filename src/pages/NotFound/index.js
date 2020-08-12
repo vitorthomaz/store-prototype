@@ -8,7 +8,7 @@ const NotFound = () => {
   return (
     <Layout>
       <Container>
-        <h1>Esta página não existe :(</h1>
+        <h1 data-testid="not-found">Esta página não existe :(</h1>
       </Container>
     </Layout>
   );

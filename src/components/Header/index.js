@@ -14,12 +14,14 @@ const Header = () => {
     {
       description: 'Início',
       icon: Home,
-      action: () => history.push(path.HOME)
+      action: () => history.push(path.HOME),
+      key: 'home'
     },
     {
       description: 'Carrinho',
       icon: Cart,
-      action: () => history.push(path.CHECKOUT)
+      action: () => history.push(path.CHECKOUT),
+      key: 'cart'
     }
   ];
 

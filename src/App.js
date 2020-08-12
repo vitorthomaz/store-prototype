@@ -4,21 +4,27 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import routes from './routes';
 import NotFound from './pages/NotFound';
 
-const App = () => {
+export const App = () => {
+  return (
+    <Switch>
+      {routes.map(({ path, Component, description }) => (
+        <Route exact path={path} key={description}>
+          <Component />
+        </Route>
+      ))}
+      <Route path={'*'}>
+        <NotFound />
+      </Route>
+    </Switch>
+  );
+};
+
+const withRouter = () => {
   return (
     <Router>
-      <Switch>
-        {routes.map(({ path, Component, description }) => (
-          <Route exact path={path} key={description}>
-            <Component />
-          </Route>
-        ))}
-        <Route path={'*'}>
-          <NotFound />
-        </Route>
-      </Switch>
+      <App />
     </Router>
   );
 };
 
-export default App;
+export default withRouter;

@@ -16,10 +16,12 @@ const Products = () => {
       <Container>
         <Title>Lista de Produtos</Title>
         {isLoading && <LoadingIndicator />}
-        {error && <span>Nenhum produto encontrado</span>}
+        {error && (
+          <span data-testid="no-product">Nenhum produto encontrado</span>
+        )}
 
         {!isLoading && !error && (
-          <CardGrid>
+          <CardGrid data-testid="grid">
             {products.map(({ id, price, title, url }) => (
               <Card key={id} id={id} price={price} title={title} url={url} />
             ))}

@@ -5,7 +5,7 @@ import { Container } from './styles';
 
 const Table = ({ data }) => {
   return (
-    <Container>
+    <Container data-testid="shopping-cart-products">
       <thead>
         <tr>
           <th>Produto</th>
@@ -34,7 +34,7 @@ Table.propTypes = {
       title: proptypes.string,
       price: proptypes.number,
       amount: proptypes.number,
-      total: proptypes.number
+      total: proptypes.string
     })
   )
 };

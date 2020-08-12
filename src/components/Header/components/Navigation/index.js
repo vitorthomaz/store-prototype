@@ -7,8 +7,13 @@ const Navigation = ({ data }) => {
   return (
     <nav>
       <Container>
-        {data.map(({ text, icon: Icon, description, action }) => (
-          <Item title={description} key={description} onClick={action}>
+        {data.map(({ text, icon: Icon, description, action, key }) => (
+          <Item
+            data-testid={`button-${key}`}
+            key={key}
+            title={description}
+            onClick={action}
+          >
             {text}
             {Icon && <Icon />}
           </Item>
@@ -23,6 +28,7 @@ Navigation.propTypes = {
     proptypes.shape({
       description: proptypes.string.isRequired,
       action: proptypes.func.isRequired,
+      key: proptypes.string.isRequired,
       text: proptypes.string,
       icon: proptypes.func
     })

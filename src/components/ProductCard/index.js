@@ -35,19 +35,21 @@ const ProductCard = ({ id, price, title, url }) => {
   );
 
   return (
-    <Card>
+    <Card data-testid={`card-${id}`}>
       <Image src={url} />
       <Infos>
         <Title>{title}</Title>
         <Price>R$ {price.toFixed(2)}</Price>
         <CartZone>
           <RedZone
+            testid={`card-${id}-remove`}
             onClick={() => {
               remove(id);
             }}
           />
-          <Quantity>{quantity}</Quantity>
+          <Quantity data-testid={`card-${id}-counter`}>{quantity}</Quantity>
           <GreenZone
+            testid={`card-${id}-add`}
             onClick={() => {
               add(id, title, price);
             }}

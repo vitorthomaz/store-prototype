@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
 import { Shopping } from '../../../../assets/icons';
@@ -16,7 +16,7 @@ const Cart = () => {
   }, [shopping]);
 
   return (
-    <Container>
+    <Container data-testid="shopping-cart">
       <Counter>{count}</Counter>
       <Shopping />
     </Container>
