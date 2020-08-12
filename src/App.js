@@ -2,6 +2,7 @@ import React from 'react';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 
 import routes from './routes';
+import NotFound from './pages/NotFound';
 
 const App = () => {
   return (
@@ -12,6 +13,9 @@ const App = () => {
             <Component />
           </Route>
         ))}
+        <Route path={'*'}>
+          <NotFound />
+        </Route>
       </Switch>
     </Router>
   );
